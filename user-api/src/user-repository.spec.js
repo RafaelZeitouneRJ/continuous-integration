@@ -20,7 +20,7 @@ describe("UserRepository", () => {
   });
 
   beforeEach(async () => {
-   await collection.deleteMany({});
+    await collection.deleteMany({});
   });
 
   describe("findOneById", () => {
@@ -36,10 +36,9 @@ describe("UserRepository", () => {
 
     //test.todo("Deve lançar uma exceção para um usuário não existente");
     test("Deve lançar uma exceção para um usuário não existente", async () => {
-     const user = await expect(userRepository.findOneById()).rejects.toThrow(
+      const user = await expect(userRepository.findOneById()).rejects.toThrow(
         "User with email john@doe.com does not exist"
       );
-      
     });
   });
 
@@ -89,14 +88,14 @@ describe("UserRepository", () => {
       const user = result;
       user.name = "Rafael";
       user.email = "rafaelzeitoune@yahoo.com.br";
-      expect(await userRepository.update(result.id,user)).toStrictEqual(user);
+      expect(await userRepository.update(result.id, user)).toStrictEqual(user);
     });
     //test.todo("Deve atualizar um usuário existente" );
     //test.todo("Deve lançar uma exceção para um usuário não existente");
 
     test("Deve lançar uma exceção para um usuário não existente para fazer update", async () => {
       await expect(
-        userRepository.update("61b8b326c866f10fa81cc9c2",{
+        userRepository.update("61b8b326c866f10fa81cc9c2", {
           //id: "61b8b326c866f10fa81cc9c2",
           name: "Fernanada",
           email: "fernanda@yahoo.com.br",
