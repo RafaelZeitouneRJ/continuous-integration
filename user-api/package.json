@@ -6,7 +6,9 @@
   "scripts": {
     "clear:db": "node src/clear.database",
     "start": "node src/server.js",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix"
   },
   "keywords": [],
   "author": "",
