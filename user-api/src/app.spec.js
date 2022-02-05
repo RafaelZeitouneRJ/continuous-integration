@@ -145,7 +145,7 @@ describe('UserApi', () => {
       test('Deve retornar status code 404 para usuário não existente', async () => {
         const response = await request(app)
             .put(`/users/61bfca54e1697cc3a2cb3aec`)
-            .send({name: 'John Doe', email: 'john@doe.com'});
+            .send({name: 'John Doe', email: 'john@doe.com'})
 
         // console.info(response.body);
         expect(response.statusCode).toBe(404);
