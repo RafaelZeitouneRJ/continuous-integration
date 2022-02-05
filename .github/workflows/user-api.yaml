@@ -12,7 +12,7 @@ defaults:
 jobs:
   lint:
     name: Análise estática
-    runs-on: windowns
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
