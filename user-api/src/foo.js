@@ -5,5 +5,5 @@ const foo = 'bar';
  */
 function bar() {}
 
-bar(foo)
+bar(foo);
 
