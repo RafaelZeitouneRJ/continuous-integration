@@ -135,7 +135,7 @@ describe('UserApi', () => {
         user.name='Rafael Zeitoune';
         user.email='rafaelzeitoune@yahoo.com.br';
         const response = await request(app).put(`/users/${user.id}`).send(user);
-        // expect(response.statusCode).toBe(200);
+        expect(response.statusCode).toBe(200);
         /*
         expect(response.body).toEqual(
           expect.objectContaining(user)

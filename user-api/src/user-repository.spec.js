@@ -32,11 +32,16 @@ describe('UserRepository', () => {
       });
 
       const user = await userRepository.findOneById(result.id);
+      expect(user).toStrictEqual({
+        id: result.id,
+        name: 'John Does',
+        email: 'john@doe.com',
+      });
     });
 
     // test.todo("Deve lançar uma exceção para um usuário não existente");
     test('Deve lançar uma exceção para um usuário não existente', async () => {
-      const user = await expect(userRepository.findOneById()).rejects.toThrow(
+      await expect(userRepository.findOneById('61d46d4145060d6173772781')).rejects.toThrow(
           'User with email john@doe.com does not exist',
       );
     });

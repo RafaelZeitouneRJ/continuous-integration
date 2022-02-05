@@ -63,7 +63,7 @@ app.post('/users', async (request, response) => {
 
 app.get('/users/:id', async (request, response) => {
   try {
-    const user = await userRepository.findOneById(ObjectId(request.params.id)); // params id vem pela url conforme o parametro que coloquei na rota
+    const user = await userRepository.findOneById(new ObjectId(request.params.id)); // params id vem pela url conforme o parametro que coloquei na rota
     // response.status(200).json(user); //Por padrão irá retornar o statusCode 200
     response.json(user);
   } catch (error) {
@@ -77,7 +77,7 @@ app.get('/users/:id', async (request, response) => {
 // O delete foi criado para esta aula e ainda não foi testado.
 app.delete('/users/:id', async (request, response) => {
   try {
-    await userRepository.delete(ObjectId(request.params.id));
+    await userRepository.delete(new ObjectId(request.params.id));
     // response.status(200).json(request.body)
     response.status(200).json({
       message: 'User delete with success',
@@ -97,7 +97,7 @@ app.put('/users/:id', async (request, response) => {
     // console.info(request.body);
     // console.info(ObjectId(request.params.id));
     const user = await userRepository.update(
-        ObjectId(request.params.id),
+        new ObjectId(request.params.id),
         request.body,
     ); // Ess é a versão que usarei
     // const user = await userRepository.update(request.body);
