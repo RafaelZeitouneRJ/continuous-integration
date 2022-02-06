@@ -14,11 +14,11 @@ Testes de integração e de sistemas:
 
  Instalação
 
- 1- Basta fazer o download do projeto com a ferramenta git , utilizando o comando git clone ou baixando direto clicando no arquivo.
- 2- Entrar em cada pasta e executar o comando npm instal para baixar as dependências.
- 3- O banco de dados utilizado pela aplicação é mongoDB e é utilizado localmente. Toda configuração do banco de dados está na próprio arquivo app.js;
- 4- A pasta github\workflows tem o arquivo user-api.yaml de configuração da integração contínua ou CI que utilizará o gitHub;
- 5- É utilizado Eslint para fazer a verificação do padrão do código escrito;
+ - Basta fazer o download do projeto com a ferramenta git , utilizando o comando git clone ou baixando direto clicando no arquivo.
+ - Entrar em cada pasta e executar o comando npm instal para baixar as dependências.
+ - O banco de dados utilizado pela aplicação é mongoDB e é utilizado localmente. Toda configuração do banco de dados está na próprio arquivo app.js;
+ - A pasta github\workflows tem o arquivo user-api.yaml de configuração da integração contínua ou CI que utilizará o gitHub;
+ - É utilizado Eslint para fazer a verificação do padrão do código escrito;
 
 
 
