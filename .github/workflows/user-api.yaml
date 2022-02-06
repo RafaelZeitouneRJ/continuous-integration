@@ -23,7 +23,7 @@ jobs:
           cache-dependency-path: user-api/package-lock.json
       - run: npm ci
       - run: npm run lint
-      
+
   vulnerability:
     name: Teste de Vulnerabilidade
     runs-on: ubuntu-latest
