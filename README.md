@@ -20,6 +20,8 @@ Testes de integração e de sistemas:
  - A pasta github\workflows tem o arquivo user-api.yaml de configuração da integração contínua ou CI que utilizará o gitHub;
  - É utilizado Eslint para fazer a verificação do padrão do código escrito;
 
+ Obs: Só está faltando executar os testes de integração e sistemas, bem como testes de interface no git workflows. É necessário criar um container para subir o mongoDB e hoje o mongoDB está me minha máquina, logo só consigo executar esses teste na máquina localmente.
+
 
 
 
