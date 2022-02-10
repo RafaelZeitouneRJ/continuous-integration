@@ -18,7 +18,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 14.x
           cache: "npm"
           cache-dependency-path: user-api/package-lock.json
       - run: npm ci
@@ -32,7 +32,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 14.x
           cache: "npm"
           cache-dependency-path: user-api/package-lock.json
       - run: npm ci
