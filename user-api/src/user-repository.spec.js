@@ -7,7 +7,7 @@ describe('UserRepository', () => {
   let client;
 
   beforeAll(async () => {
-    const uri = 'mongodb://localhost';
+    const uri = 'mongodb://localhost:17017';
     // const uri = 'mongodb://rafael:123abc@localhost/usuarios?retryWrites=true&w=majority';
     client = new MongoClient(uri);
     await client.connect();

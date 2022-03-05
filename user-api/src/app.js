@@ -33,7 +33,7 @@ let connected = false;
 
 app.use(async (req, res, next) => {
   if (!connected) {
-    const uri = 'mongodb://localhost';
+    const uri = 'mongodb://localhost:17017';
     client = new MongoClient(uri);
     await client.connect();
     const collection = client.db('users_db').collection('users');
